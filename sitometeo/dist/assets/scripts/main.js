@@ -53,13 +53,6 @@ weatherForm.addEventListener("submit", function (e) {
     var li = document.createElement("li");
     li.classList.add("card");
     li.dataset.identity = id;
-    var temp = "__temp";
-
-    if (main.temp <= 5) {
-      temp = "__temp--cold";
-    } else if (main.temp >= 25) {
-      temp = "__temp--hot";
-    }
 
     var cardTemplate = "\n                <h2  class=\"card__name\">\n                    <span>".concat(name, "</span>\n                    <sup>").concat(sys.country, "</sup>\n                </h2>\n                <div class=\"card__temp\">\n                    <span>").concat(Math.round(main.temp), "</span>\n                    <sup>\xB0C</sup>\n                </div>\n                <figure class=\"card__figure\">\n                    <img class=\"card__icon\" src=\"").concat(icon, "\" alt=\"").concat(description, "\">\n                    <figcaption>").concat(description, "</figcaption>\n                    <div class='close' onclick='rimuovi(this)'>\n                        <p>x</p>\n                    </div>\n                </figure>\n\n            ");
     li.innerHTML = cardTemplate;
@@ -77,27 +70,6 @@ weatherForm.addEventListener("submit", function (e) {
 function rimuovi(el) {
   el.parentNode.parentNode.remove();
 }
-/**
- * 
- * TODO
- * 
- * Permettere all'utente di scegliere se unità di misura in metrico/imperiale
- *      select
- *      chiedendo la lingua impostata sul browser
- *      NB se cambia unità di misura, aggiornare anche le varie particelle di testo es. "C"
- * 
- * Permettere di ottenere il meteo della posizione geografica in cui si trova l'utente
- * 
- * Controllare che non vengano richiesti più volte gli stessi dati
- *  
- * LO STILE, liberi di impostare lo stile che desiderato
- * 
- * Reset di tutti gli elementi aggiunti nella DOM
- * 
- * Se possibile scrivere in linea i file SVG
- * 
- */
-
 
 var a = $('.el');
 console.log(a);
