@@ -8,21 +8,6 @@
     margin-left: auto;
     margin-right: auto;
 
-    // &__name {
-
-    // }
-
-    &__temp {
-        color: gray;
-        &--cold {
-            color: $blue;
-        }
-        &--hot {
-            color: $red;
-        }
-    }
-
-
 }
 .card:hover {
     transition: .5s ease;
