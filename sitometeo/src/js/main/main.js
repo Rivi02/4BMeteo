@@ -64,15 +64,7 @@ weatherForm.addEventListener("submit", e => {
             li.classList.add("card");
 
             li.dataset.identity = id;
-            
-            var temp = "__temp";
-
-            if (main.temp <= 5) {
-              temp = "__temp--cold";
-            } else if (main.temp >= 25) {
-              temp = "__temp--hot";
-            }
-
+        
             const cardTemplate = `
                 <h2  class="card__name">
                     <span>${name}</span>
@@ -109,27 +101,5 @@ weatherForm.addEventListener("submit", e => {
 function rimuovi(el){
     el.parentNode.parentNode.remove();
   }
-
-/**
- * 
- * TODO
- * 
- * Permettere all'utente di scegliere se unità di misura in metrico/imperiale
- *      select
- *      chiedendo la lingua impostata sul browser
- *      NB se cambia unità di misura, aggiornare anche le varie particelle di testo es. "C"
- * 
- * Permettere di ottenere il meteo della posizione geografica in cui si trova l'utente
- * 
- * Controllare che non vengano richiesti più volte gli stessi dati
- *  
- * LO STILE, liberi di impostare lo stile che desiderato
- * 
- * Reset di tutti gli elementi aggiunti nella DOM
- * 
- * Se possibile scrivere in linea i file SVG
- * 
- */
-
 const a = $('.el');
 console.log(a);
