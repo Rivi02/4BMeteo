@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>4B Meteo</title>
+		<link rel="stylesheet" href="./assets/vendors/vendors-css/normalize.min.css">
+		<link rel="stylesheet" href="./assets/styles/main.min.css">
+	</head>
+	<body>
+		<div class="app">		
+			<section class="container header-section">
+				<h1 class="site-title">4B Meteo</h1>
+				<form class="form" id="weatherForm" autocomplete="off">
+					<div class="wrap">
+						<div class="search">
+						   <input type="text" name="city" id="city" class="searchTerm" placeholder="Di che città vuoi sapere il meteo?">
+						   <button type="submit" class="searchButton btn btn-primary" >
+							 <i class="fa fa-search"></i>
+						  </button>
+						</div>
+					 </div>	
+				</form>
+			<span class="msg"></span>
+		</section>
+		<section class="ajax-section container">
+			<ul class="card-wrapper list-reset">
+			</ul>
+		</section>
+	</div>
+	
+	<script src="./assets/vendors/vendors-js/jquery.min.js"></script>
+	<script src="./assets/scripts/main.js"></script>
+	</body>
+</html>

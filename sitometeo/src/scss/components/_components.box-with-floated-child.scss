@@ -1,0 +1,8 @@
+.box-with-floated-child {
+    @extend %clearfix;
+
+    &__child {
+        float: left;
+    }
+
+}

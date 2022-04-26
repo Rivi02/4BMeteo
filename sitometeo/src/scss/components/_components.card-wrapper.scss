@@ -1,0 +1,11 @@
+.card-wrapper {
+    padding: 2em;
+    display: grid;
+    grid-gap: 2em 2em;
+    @include respond-between(md,lg) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include respond-above(lg) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

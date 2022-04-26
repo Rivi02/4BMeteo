@@ -1,0 +1,17 @@
+body {
+    font-size: 14px;
+    background: rgb(63,94,251);
+    background: -moz-linear-gradient(180deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    background: linear-gradient(180deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3f5efb",endColorstr="#fc466b",GradientType=1);
+    background-attachment: fixed;
+
+    @include respond-between(md, lg) {
+        font-size: 16px;
+    }
+    @include respond-above(lg) {
+        font-size: 18px;
+    }
+
+}

@@ -1,0 +1,20 @@
+.parent-box {
+    div {
+        margin: 1em;
+        padding: 1em;
+        background-color: red;
+        border: 1px solid black;
+    }
+
+    &--green {
+        div {
+            background-color: green;
+        }
+    }
+
+    .body-dark & {
+        div {
+            background-color: black;
+        }
+    }
+}

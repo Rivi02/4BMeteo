@@ -1,0 +1,43 @@
+.card {
+    height: 250px;
+    position: relative;
+    margin-top:50px;
+    background-color: $white;
+    border-radius: 1em;
+    padding: 1em;
+    margin-left: auto;
+    margin-right: auto;
+
+    // &__name {
+
+    // }
+
+    &__temp {
+        color: gray;
+        &--cold {
+            color: $blue;
+        }
+        &--hot {
+            color: $red;
+        }
+    }
+
+
+}
+.card:hover {
+    transition: .5s ease;
+    transform: scale(1.1);
+}
+.card p{
+    opacity: 0;
+}
+.card:hover p {
+    position:absolute;
+    top:6%;
+    left:90%;
+    cursor: pointer;
+    transition: .5s ease;
+    transform: scale(1.1);
+    opacity: 1;
+}
+

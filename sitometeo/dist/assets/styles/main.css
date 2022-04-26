@@ -1,0 +1,170 @@
+/*
+
+    @doc scss https://sass-lang.com/guide
+
+*/
+/**
+    Extend 
+    https://sass-lang.com/guide#topic-7
+*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+.box-with-floated-child {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  font-size: 14px;
+  background: rgb(63, 94, 251);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(63, 94, 251)), to(rgb(252, 70, 107)));
+  background: linear-gradient(180deg, rgb(63, 94, 251) 0%, rgb(252, 70, 107) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3f5efb",endColorstr="#fc466b",GradientType=1);
+  background-attachment: fixed;
+}
+@media (min-width: 640px) and (max-width: 959px) {
+  body {
+    font-size: 16px;
+  }
+}
+@media (min-width: 960px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+.header-section {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: aliceblue;
+}
+
+.search {
+  width: 100%;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus {
+  color: #000000;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  background-image: url(https://icon-library.com/images/lens-icon/lens-icon-11.jpg);
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap {
+  width: 30%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  /* -webkit-transform: translate(-50%,-50%); */
+  /* transform: translate(-50%,-50%); */
+}
+
+.card-wrapper {
+  padding: 2em;
+  display: grid;
+  grid-gap: 2em 2em;
+}
+@media (min-width: 640px) and (max-width: 959px) {
+  .card-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 960px) {
+  .card-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  height: 250px;
+  position: relative;
+  margin-top: 50px;
+  background-color: #fff;
+  border-radius: 1em;
+  padding: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card__temp {
+  color: gray;
+}
+.card__temp--cold {
+  color: #356dce;
+}
+.card__temp--hot {
+  color: #f54829;
+}
+
+.card:hover {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.card p {
+  opacity: 0;
+}
+
+.card:hover p {
+  position: absolute;
+  top: 6%;
+  left: 90%;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  opacity: 1;
+}
+
+.box-with-floated-child__child {
+  float: left;
+}
+
+.parent-box div {
+  margin: 1em;
+  padding: 1em;
+  background-color: red;
+  border: 1px solid black;
+}
+.parent-box--green div {
+  background-color: green;
+}
+.body-dark .parent-box div {
+  background-color: black;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
